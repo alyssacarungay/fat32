@@ -12,15 +12,16 @@ This application is able to do three commands:
 	
 # usage
 `prompt> ./fat32 [fat32 image] [command] [filepath]`
+
 *`fat32image` is the name of the disk drive being parsed. `command` is one of the three commands that can be executed(info, list, get). `filepath` is only required for the `get` command.*
 
 ### info command
-`prompt> ./fat32 [fat32 image] [info]`
+`./fat32 [fat32 image] [info]`
 
 Prints out information about the file system. Information includes the drive name, amount of free space (including reserved section), usabale free space, and cluster size.
 
 **Example** 
-`prompt> ./fat32 fat32disk info`
+`./fat32 fat32disk info`
 
 **output** 
 
@@ -33,12 +34,12 @@ Usable Space:  34264 kB
 Cluster Size:  1 Sector(s) 512 Bytes
 
 ## list command
-`prompt> ./fat32 [fat32 image] [list]`
+`./fat32 [fat32 image] [list]`
 
 The output returned will be a list of files/directories stored in the disk image. A directories contents will be displayed directly below it. Output is indented to display the hiearchy of contents in the file system. Reminder: Long names are abbreviated to its shorter form. 
 
 **Example** 
-`prompt> ./fat32 fat32disk list`
+`./fat32 fat32disk list`
 
 **output** 
 
@@ -62,17 +63,17 @@ DIRECTORY: FOLDER2
 
 ## get command
 
-`prompt> ./fat32 [fat32 image] [get] [filename]`
+`./fat32 [fat32 image] [get] [filename]`
 
 This command will locate `filename` in the disk drive and place the file onto the local directory.
 
 **Example** 
-`prompt> ./fat32 fat32disk get /FOLDER1/thatexists.txt`
+`./fat32 fat32disk get /FOLDER1/thatexists.txt`
 **output** 
 File 'thatexists.txt' was succesful
 
 **Example** 
-`prompt> ./fat32 fat32disk get /FOLDER1/doesnotexist.txt`
+`./fat32 fat32disk get /FOLDER1/doesnotexist.txt`
 **output** 
 No file/directory named 'doesnotexist.txt'
 
