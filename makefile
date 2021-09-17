@@ -1,7 +1,3 @@
-
-SCHED = scheduler
-ASSESTS = assets
-
 CC = gcc -std=c99 
 CFLAGS  = -g -Wall -Wpedantic -Wextra -pthread
 
